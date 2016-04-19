@@ -1,10 +1,10 @@
-# bash
+# bash-scripts
 
-##dmenu.sh
+###dmenu.sh
   dmenu script
 
-##yedekal
+###yedekal
   script for organized backup
 
-##themenuthatrulesthemall.sh
+###themenuthatrulesthemall.sh
   custom menu for openbox right click menu  for the lazy
