@@ -1,0 +1,17 @@
+#!/bin/bash
+
+mkdir ~/RandomBekaplar/$(date '+%d-%b-%Y')
+cd ~/RandomBekaplar/$(date '+%d-%b-%Y')
+mkdir Bilgisayar
+mkdir Onemli
+mkdir Bilgisayar/openbox
+cp ~/.bashrc ~/.vimrc ~/.xsession ~/.Xauthority ~/.Xresources ~/RandomBekaplar/$(date '+%d-%b-%Y')/Bilgisayar
+cp -rf ~/.fonts ~/Scripts/bin ~/Scripts/conky ~/Scripts/kullanilan ~/Scripts/tint2 ~/RandomBekaplar/$(date '+%d-%b-%Y')/Bilgisayar/
+cp -rf ~/.config/openbox/* ~/RandomBekaplar/$(date '+%d-%b-%Y')/Bilgisayar/openbox/
+pacman -Qe > ~/RandomBekaplar/$(date '+%d-%b-%Y')/Bilgisayar/yuklupaketler.txt
+mkdir configAlayi
+cp -rf ~/.config/ ~/RandomBekaplar/$(date '+%d-%b-%Y')/configAlayi
+
+cp -rf ~/Desktop/matlab2014b/calisma ~/RandomBekaplar/$(date '+%d-%b-%Y')/Onemli
+cd ..
+tar cvzf $(date '+%d-%b-%Y').tar.gz $(date '+%d-%b-%Y')/
