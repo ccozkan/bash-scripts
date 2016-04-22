@@ -1,0 +1,11 @@
+#!/bin/bash
+figlet welcome
+fortune | cowsay 
+echo "$(tput setaf 5)##########################################################$(tput sgr0)"
+echo "$(tput setaf 2)son iki pacupdate$(tput sgr1)"
+grep "pacman -Syu" /var/log/pacman.log | tail -2
+echo "$(tput setaf 4)son iki pacupdate-aur$(tput sgr1)"
+grep "pacaur -S -y -u --needed" /var/log/pacman.log | tail -2
+echo "$(tput setaf 3)son 2 syyu$(tput sgr1)"
+grep "pacman -Syyu" /var/log/pacman.log | tail -2
+echo "$(tput setaf 5)##########################################################$(tput sgr0)"
