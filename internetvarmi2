@@ -1,0 +1,8 @@
+#!/bin/bash
+
+wget -q --tries=10 --timeout=20 --spider http://google.com
+if [[ $? -eq 0  ]]; then
+         date "+%Y%m%d.%H%M,1 "
+else
+         date "+%Y%m%d.%H%M,0 "
+fi
